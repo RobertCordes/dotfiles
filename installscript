@@ -18,7 +18,7 @@ rm $HOME/.zshrc
 ln -s $HOME/.dotfiles/shell/.zshrc $HOME/.zshrc
 
 # Symlink the Mackup config
-ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
+# ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
 
 # Fix missing font characters (see https://github.com/robbyrussell/oh-my-zsh/issues/1906)
 cd ~/.oh-my-zsh/themes/
@@ -28,11 +28,11 @@ git checkout d6a36b1 agnoster.zsh-theme
 cd ~/.dotfiles/shell
 chmod +x z.sh
 
-echo 'Configure npm'
-echo '-------------'
+# echo 'Configure npm'
+# echo '-------------'
 # Create a directory for global packages and tell npm where to store globally installed packages
-mkdir "${HOME}/.npm-packages"
-npm config set prefix "${HOME}/.npm-packages"
+# mkdir "${HOME}/.npm-packages"
+# npm config set prefix "${HOME}/.npm-packages"
 
 echo 'Install homebrew'
 echo '----------------'
@@ -41,9 +41,9 @@ sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/freek/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-echo 'Install node'
-echo '------------'
-brew install node
+# echo 'Install node'
+# echo '------------'
+# brew install node
 
 echo 'Install pkg-config'
 echo '------------------'
