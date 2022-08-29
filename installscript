@@ -38,8 +38,12 @@ echo 'Install homebrew'
 echo '----------------'
 sudo rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/freek/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/robertcordes/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+echo 'Install nvm'
+echo '----------------'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # echo 'Install node'
 # echo '------------'
